@@ -1,0 +1,46 @@
+{
+  "name": "leanify",
+  "version": "0.1.0",
+  "description": "browserify transformer which removes unreachable branches",
+  "main": "./lib/index.js",
+  "scripts": {
+    "test": "(ducktape; node test) | tap-difflet && standard",
+    "watch": "nodemon test | tap-difflet",
+    "cover": "istanbul cover --report none --print detail test",
+    "docs": "node_modules/vigour-doc/bin/vdoc",
+    "travis": "npm run cover -s && istanbul report lcov && ((cat coverage/lcov.info | coveralls) || exit 0) && standard"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vigour-io/leanify.git"
+  },
+  "keywords": [
+    "leanify",
+    "browserify",
+    "transform"
+  ],
+  "author": "Mustafa Dokumacı",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/vigour-io/leanify/issues"
+  },
+  "homepage": "https://github.com/vigour-io/leanify#readme",
+  "dependencies": {
+    "escodegen": "^1.8.1",
+    "esmangle": "^1.0.1",
+    "esprima": "^3.0.0",
+    "through2": "^2.0.1"
+  },
+  "devDependencies": {
+    "tape": "^4.4.0",
+    "sinon": "^1.17.0",
+    "ducktape": "^1.0.0",
+    "tap-difflet": "0.4.0",
+    "nodemon": "^1.9.1",
+    "coveralls": "^2.11.9",
+    "istanbul": "^0.4.3",
+    "standard": "^7.0.1",
+    "vigour-doc": "^1.1.5",
+    "pre-commit": "^1.1.3"
+  }
+}
