@@ -7,4 +7,4 @@
 [![Coverage Status](https://coveralls.io/repos/github/vigour-io/leanify/badge.svg?branch=master)](https://coveralls.io/github/vigour-io/leanify?branch=master)
 <!-- VDOC END -->
 
-A bbrowserify transformer which removes unreachable branches.
+A browserify transformer which removes unreachable branches.
