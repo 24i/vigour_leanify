@@ -27,8 +27,9 @@
   "homepage": "https://github.com/vigour-io/leanify#readme",
   "dependencies": {
     "escodegen": "^1.8.1",
-    "esmangle": "^1.0.1",
+    "escope": "^3.6.0",
     "esprima": "^3.0.0",
+    "estraverse": "^4.2.0",
     "through2": "^2.0.1"
   },
   "devDependencies": {
