@@ -29,6 +29,20 @@ test('No optimization', function (t) {
     .end(code)
 })
 
+test('undefined optimization', function (t) {
+  const oldCode = 'if (undefined) {\n  console.log(42);\n} else {\n  console.log(24);\n}'
+  const newCode = '{\n  console.log(24);\n}'
+
+  var buffer = ''
+  leanify('test.js')
+    .on('data', d => { buffer += d })
+    .on('end', function () {
+      t.equal(buffer, newCode, 'if removed, else used')
+      t.end()
+    })
+    .end(oldCode)
+})
+
 test('literal optimization', function (t) {
   const oldCode = 'if (42 === 24) {\n  console.log(42);\n} else {\n  console.log(24);\n}'
   const newCode = '{\n  console.log(24);\n}'
