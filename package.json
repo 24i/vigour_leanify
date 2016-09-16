@@ -1,6 +1,6 @@
 {
   "name": "leanify",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "browserify transformer which removes unreachable branches",
   "main": "./lib/index.js",
   "scripts": {
